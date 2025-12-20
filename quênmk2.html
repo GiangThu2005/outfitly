@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Outfitly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/hoso.css">
+</head>
+
+<div class="phone-container">
+
+    <!-- HEADER -->
+    <header class="header">
+        <p class="logo">OUTFITLY</p>
+    </header>
+
+    <div class="page-header">
+        <button class="back-btn" onclick="history.back()">❮</button>
+        <h1>Quên Mật Khẩu</h1>
+    </div>
+
+    <!-- TITLE -->
+    <h2 class="reset-title">Thay Đổi Mật Khẩu</h2>
+
+    <!-- CONTENT -->
+    <div class="reset-box">
+
+        <label>Mật Khẩu</label>
+        <div class="password-field">
+            <input type="password" id="newPassword" placeholder="Nhập mật khẩu">
+            <span class="eye" onclick="togglePassword('newPassword', this)">👁</span>
+        </div>
+
+        <label>Xác Nhận Mật Khẩu</label>
+        <div class="password-field">
+            <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu">
+            <span class="eye" onclick="togglePassword('confirmPassword', this)">👁</span>
+        </div>
+
+        <button type="button" class="confirm-btn" onclick="location.href='dangnhap.html'">Xác Nhận</button>
+
+    </div>
+
+</div>
+
+  </main>
+  <script>
+function togglePassword(inputId, icon) {
+    const input = document.getElementById(inputId);
+    const isPassword = input.type === "password";
+
+    input.type = isPassword ? "text" : "password";
+    icon.textContent = isPassword ? "🙈" : "👁";
+}
+</script>
+</body>
+</html>
